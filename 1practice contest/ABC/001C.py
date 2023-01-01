@@ -1,4 +1,4 @@
-from decimal import Decimal, ROUND_HALF_UP
+"""from decimal import Decimal, ROUND_HALF_UP
 de, di=map(int, input().split())
 de=de/10
 h=""
@@ -66,4 +66,71 @@ else:
     p=12
     
 print(di)
-print(h, p)
+print(h, p)"""
+
+Deg, Dis = map(int, input().split())
+ 
+if 113 <= Deg <= 337:
+    Dir = 'NNE'
+elif 338 <= Deg <= 562:
+    Dir = 'NE'
+elif 563 <= Deg <= 787:
+    Dir = 'ENE'
+elif 788 <= Deg <= 1012:
+    Dir = 'E'
+elif 1013 <= Deg <= 1237:
+    Dir = 'ESE'
+elif 1238 <= Deg <= 1462:
+    Dir = 'SE'
+elif 1463 <= Deg <= 1687:
+    Dir = 'SSE'
+elif 1688 <= Deg <= 1912:
+    Dir = 'S'
+elif 1913 <= Deg <= 2137:
+    Dir = 'SSW'
+elif 2138 <= Deg <= 2362:
+    Dir = 'SW'
+elif 2363 <= Deg <= 2587:
+    Dir = 'WSW'
+elif 2588 <= Deg <= 2812:
+    Dir = 'W'
+elif 2813 <= Deg <= 3037:
+    Dir = 'WNW'
+elif 3038 <= Deg <= 3262:
+    Dir = 'NW'
+elif 3263 <= Deg <= 3487:
+    Dir = 'NNW'
+else:
+    Dir = 'N'
+ 
+if Dis <= 14:
+    W = 0
+elif 15 <= Dis <= 92:
+    W = 1
+elif 93 <= Dis <= 200:
+    W = 2
+elif 201 <= Dis <= 326:
+    W = 3
+elif 327 <= Dis <= 476:
+    W = 4
+elif 477 <= Dis <= 644:
+    W = 5
+elif 645 <= Dis <= 830:
+    W = 6
+elif 831 <= Dis <= 1028:
+    W = 7
+elif 1029 <= Dis <= 1244:
+    W = 8
+elif 1245 <= Dis <= 1466:
+    W = 9
+elif 1467 <= Dis <= 1706:
+    W = 10
+elif 1707 <= Dis <= 1958:
+    W = 11
+else:
+    W = 12
+ 
+if W == 0:
+    Dir = 'C'
+ 
+print(Dir, W)
